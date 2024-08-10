@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "66b6a689d0dc09819050cb1b"
+  },
+  "codigo_restaurante": "",
+  "nombre": "",
+  "direccion": {
+    "coordenadas": [
+      0,
+      0
+    ],
+    "numero": "",
+    "calle": "",
+    "cp": ""
+  },
+  "distrito": "",
+  "tipo_cocina": "",
+  "reviews": [
+    {
+      "fecha": {
+        "$date": "2001-01-01T06:00:00.000Z"
+      },
+      "calificacion": 0,
+      "comentario": "",
+      "usuario_id": {
+        "$oid": "66b7b9e0d0dc09819050cb4d"
+      },
+      "_id": {
+        "$oid": "66b7af24d0dc09819050cb2e"
+      }
+    }
+  ]
+}]

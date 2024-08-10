@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "66b7af56d0dc09819050cb30"
+  },
+  "nombre": "",
+  "apellido1": "",
+  "apellido2": "",
+  "nacimiento": "",
+  "usuario": "",
+  "correo": "",
+  "password": "",
+  "favoritos": [
+    {
+      "$oid": "66b7b98fd0dc09819050cb43"
+    }
+  ],
+  "reviews": [
+    {
+      "restaurente_id": {
+        "$oid": "66b7b9aed0dc09819050cb47"
+      },
+      "review_id": {
+        "$oid": "66b7b9b5d0dc09819050cb49"
+      }
+    }
+  ]
+}]
