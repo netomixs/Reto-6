@@ -68,7 +68,6 @@ exports.get = (req, res, next) => {
 exports.getByCodeRestaurant = (req, res, next) => {
   const userSchema = Joi.object({
     code: Joi.string().required(),
- 
   });
   const error = userSchema.validate(req.params, { abortEarly: false });
   if (error.error !== undefined) {
@@ -79,5 +78,22 @@ exports.getByCodeRestaurant = (req, res, next) => {
   next();
 };
 exports.getAll = (req, res, next) => {
+  next();
+};
+exports.searchByfilter = (req, res, next) => {
+  const userSchema = Joi.object({
+    latitud: Joi.number().min(-90).max(90).required(),
+    longitud: Joi.number().min(-180).max(180).required(),
+    nombre: Joi.string().empty(),
+    distrito: Joi.string().empty(),
+    tipo_cocina: Joi.string().empty(),
+    calificacion:Joi.number().empty(),
+  });
+  const error = userSchema.validate(req.query, { abortEarly: false });
+  if (error.error !== undefined) {
+    return res
+      .status(400)
+      .json({ error: "Errores de validacion", details: error.error.details });
+  }
   next();
 };

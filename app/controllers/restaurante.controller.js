@@ -66,3 +66,13 @@ exports.getAll = (req, res) => {
       res.status(500).json(error);
     });
 };
+exports.searchByfilter = (req, res) => {
+  restauranteCore
+    .searchByfilter(req.query)
+    .then((response) => {
+      res.status(200).json(response);
+    })
+    .catch((error) => {
+      res.status(500).json(error);
+    });
+};
